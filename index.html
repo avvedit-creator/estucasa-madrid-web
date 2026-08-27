@@ -81,6 +81,16 @@
   .band-crema{background:var(--crema);}
   .band-crema-soft{background:var(--crema-soft);}
   .band-terracota{background:var(--terracota); color:var(--white);}
+  .convinced-section{
+    position:relative; overflow:hidden; min-height:70vh;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+  }
+  .convinced-section .bg-overlay{background:rgba(10,16,28,0.55);}
+  .convinced-section .wrap{position:relative; z-index:2;}
+  .convinced-heading{
+    font-family:'Poppins', Arial, sans-serif; font-weight:800; font-size:56px;
+    line-height:1.1; color:#fff; max-width:760px; margin:0 auto;
+  }
 
   .eyebrow{
     font-family:'JetBrains Mono', monospace;
@@ -260,7 +270,7 @@
   .btn-enviar:hover{opacity:0.9;}
 
   /* ---- Convinced CTAs ---- */
-  .convinced-row{display:flex; gap:16px; flex-wrap:wrap; margin-top:34px;}
+  .convinced-row{display:flex; gap:16px; flex-wrap:wrap; margin-top:34px; justify-content:center;}
 
   /* ---- Team ---- */
   .team-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px 28px; margin-top:52px;}
@@ -559,9 +569,11 @@
 
 
   <!-- TE HEMOS CONVENCIDO -->
-  <section class="band-terracota">
+  <section class="band-terracota convinced-section">
+    <video class="bg-video" autoplay muted loop playsinline src="hero-video.mp4"></video>
+    <div class="bg-overlay"></div>
     <div class="wrap">
-      <h2>¿Te hemos convencido?</h2>
+      <h2 class="convinced-heading">¿Te hemos convencido?</h2>
       <div class="convinced-row">
         <a class="pill-btn pill-on-terracota" href="index.html">Quiero vender</a>
         <a class="pill-btn pill-on-terracota" href="comprar.html">Quiero comprar</a>
